@@ -8,24 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		CAB32123208F6383008BA8A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB32122208F6383008BA8A0 /* AppDelegate.m */; };
-		CAB32126208F6383008BA8A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB32125208F6383008BA8A0 /* ViewController.m */; };
 		CAB32129208F6383008BA8A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB32127208F6383008BA8A0 /* Main.storyboard */; };
 		CAB3212B208F6383008BA8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB3212A208F6383008BA8A0 /* Assets.xcassets */; };
 		CAB3212E208F6383008BA8A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3212C208F6383008BA8A0 /* LaunchScreen.storyboard */; };
 		CAB32131208F6383008BA8A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB32130208F6383008BA8A0 /* main.m */; };
+		CAB32139208F6413008BA8A0 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB32138208F6413008BA8A0 /* Todo.m */; };
+		CAB3213C208F70CD008BA8A0 /* ToDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB3213B208F70CD008BA8A0 /* ToDoCell.m */; };
+		CAB3213F208F723F008BA8A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB3213E208F723F008BA8A0 /* TableViewController.m */; };
+		CAB32142208F7AAF008BA8A0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB32141208F7AAF008BA8A0 /* DetailViewController.m */; };
+		CAB32145208F8647008BA8A0 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB32144208F8647008BA8A0 /* AddItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAB3211E208F6383008BA8A0 /* Every.Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Every.Do.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB32121208F6383008BA8A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAB32122208F6383008BA8A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAB32124208F6383008BA8A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CAB32125208F6383008BA8A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CAB32128208F6383008BA8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAB3212A208F6383008BA8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB3212D208F6383008BA8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB3212F208F6383008BA8A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB32130208F6383008BA8A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAB32137208F6413008BA8A0 /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		CAB32138208F6413008BA8A0 /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		CAB3213A208F70CD008BA8A0 /* ToDoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoCell.h; sourceTree = "<group>"; };
+		CAB3213B208F70CD008BA8A0 /* ToDoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoCell.m; sourceTree = "<group>"; };
+		CAB3213D208F723F008BA8A0 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		CAB3213E208F723F008BA8A0 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		CAB32140208F7AAF008BA8A0 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CAB32141208F7AAF008BA8A0 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		CAB32143208F8647008BA8A0 /* AddItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
+		CAB32144208F8647008BA8A0 /* AddItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +70,23 @@
 		CAB32120208F6383008BA8A0 /* Every.Do */ = {
 			isa = PBXGroup;
 			children = (
+				CAB32137208F6413008BA8A0 /* Todo.h */,
+				CAB32138208F6413008BA8A0 /* Todo.m */,
 				CAB32121208F6383008BA8A0 /* AppDelegate.h */,
 				CAB32122208F6383008BA8A0 /* AppDelegate.m */,
-				CAB32124208F6383008BA8A0 /* ViewController.h */,
-				CAB32125208F6383008BA8A0 /* ViewController.m */,
 				CAB32127208F6383008BA8A0 /* Main.storyboard */,
 				CAB3212A208F6383008BA8A0 /* Assets.xcassets */,
 				CAB3212C208F6383008BA8A0 /* LaunchScreen.storyboard */,
 				CAB3212F208F6383008BA8A0 /* Info.plist */,
 				CAB32130208F6383008BA8A0 /* main.m */,
+				CAB3213A208F70CD008BA8A0 /* ToDoCell.h */,
+				CAB3213B208F70CD008BA8A0 /* ToDoCell.m */,
+				CAB3213D208F723F008BA8A0 /* TableViewController.h */,
+				CAB3213E208F723F008BA8A0 /* TableViewController.m */,
+				CAB32140208F7AAF008BA8A0 /* DetailViewController.h */,
+				CAB32141208F7AAF008BA8A0 /* DetailViewController.m */,
+				CAB32143208F8647008BA8A0 /* AddItemViewController.h */,
+				CAB32144208F8647008BA8A0 /* AddItemViewController.m */,
 			);
 			path = Every.Do;
 			sourceTree = "<group>";
@@ -142,9 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB32126208F6383008BA8A0 /* ViewController.m in Sources */,
+				CAB3213C208F70CD008BA8A0 /* ToDoCell.m in Sources */,
 				CAB32131208F6383008BA8A0 /* main.m in Sources */,
+				CAB32145208F8647008BA8A0 /* AddItemViewController.m in Sources */,
 				CAB32123208F6383008BA8A0 /* AppDelegate.m in Sources */,
+				CAB3213F208F723F008BA8A0 /* TableViewController.m in Sources */,
+				CAB32139208F6413008BA8A0 /* Todo.m in Sources */,
+				CAB32142208F7AAF008BA8A0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
