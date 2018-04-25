@@ -10,13 +10,14 @@
 
 @implementation Todo
 
--(instancetype)initWithTitle:(NSString*)title description:(NSString*)text priority:(int)num
+-(instancetype)initWithTitle:(NSString*)title description:(NSString*)text priority:(int)num dueDate:(NSDate*)date
 {
     self = [super init];
     if (self) {
         _title = title;
         _text = text;
         _priorityNum = num;
+        _dueDate = date;
     }
     return self;
 }

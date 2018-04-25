@@ -10,6 +10,9 @@
 #import "AddItemViewController.h"
 @interface TableViewController : UITableViewController <AddItemViewControllerDelegate>
 
-@property (nonatomic,strong) NSMutableArray *todoItems;
+//@property (nonatomic,strong) NSMutableArray *todoItems;
+
+@property (nonatomic,strong) NSMutableArray *openItems;
+@property (nonatomic,strong) NSMutableArray *closedItems;
 
 @end

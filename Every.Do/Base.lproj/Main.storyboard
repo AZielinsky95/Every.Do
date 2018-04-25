@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BEh-LQ-kmJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oHL-Q4-8FA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Every.Do-->
         <scene sceneID="ugB-6Y-lp7">
             <objects>
                 <tableViewController id="BEh-LQ-kmJ" customClass="TableViewController" sceneMemberID="viewController">
@@ -19,22 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="baF-95-dfc">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Every.Do" id="cMM-ME-lwm">
-                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="uj6-gb-Xhs">
-                                        <connections>
-                                            <segue destination="bjH-QY-cz1" kind="presentation" identifier="addItem" id="t7c-jP-iIo"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="80" id="GG0-xR-aUk" customClass="ToDoCell">
-                                <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GG0-xR-aUk" id="L3w-Gh-pt1">
                                     <rect key="frame" x="0.0" y="0.0" width="307" height="79.5"/>
@@ -79,7 +66,7 @@
                                     <outlet property="descriptionLabel" destination="I5j-Gz-cBz" id="err-4i-iIg"/>
                                     <outlet property="priorityLabel" destination="6l3-6N-v9Q" id="sQh-6n-ikL"/>
                                     <outlet property="titleLabel" destination="7Ge-7I-3OP" id="Mev-Cn-ptP"/>
-                                    <segue destination="EHf-Ai-AhX" kind="showDetail" identifier="showDetail" trigger="accessoryAction" id="zkb-jp-8Dl"/>
+                                    <segue destination="EHf-Ai-AhX" kind="show" identifier="showDetail" trigger="accessoryAction" id="p25-SZ-WM0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,10 +75,17 @@
                             <outlet property="delegate" destination="BEh-LQ-kmJ" id="Noa-2k-rqe"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Every.Do" id="Aho-Ql-uhb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oFT-ri-kDI">
+                            <connections>
+                                <segue destination="bjH-QY-cz1" kind="presentation" identifier="addItem" id="MnN-VP-ihL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3X-ko-8Iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-103.2" y="-139.880059970015"/>
+            <point key="canvasLocation" x="52" y="15"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="Kl0-UP-oLB">
@@ -135,11 +129,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hgE-x0-PSP">
+                                <rect key="frame" x="0.0" y="304" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="546291321.09793794">
+                                    <!--2018-04-24 19:35:21 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Due Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsN-nW-aBt">
+                                <rect key="frame" x="92" y="251" width="190" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="TIw-Qq-9cG"/>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="hgE-x0-PSP" id="fNZ-tA-QNb"/>
                         <outlet property="descriptionLabel" destination="Sa1-Pp-Jha" id="vQ8-Zc-9lt"/>
                         <outlet property="priorityLabel" destination="IrR-o5-1Kd" id="6n8-e6-MYU"/>
                         <outlet property="titleLabel" destination="6vY-xJ-9Tx" id="dfU-60-50h"/>
@@ -157,13 +166,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD7-f8-GqM">
-                                <rect key="frame" x="92" y="233" width="190" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Priority #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-j7-UkN">
                                 <rect key="frame" x="92" y="140" width="190" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -172,9 +174,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-6u-LOc">
-                                <rect key="frame" x="92" y="40" width="190" height="40"/>
+                                <rect key="frame" x="92" y="64" width="190" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="due Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b44-Sy-PZe">
+                                <rect key="frame" x="92" y="194" width="190" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD7-f8-GqM">
+                                <rect key="frame" x="67" y="247" width="240" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -184,13 +200,32 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="FD7-f8-GqM" id="BET-3s-PdZ"/>
+                        <outlet property="dueDateLabel" destination="b44-Sy-PZe" id="f9V-Nj-CtH"/>
                         <outlet property="priorityLabel" destination="SVf-j7-UkN" id="jO9-m2-NpP"/>
                         <outlet property="titleLabel" destination="2Zg-6u-LOc" id="nOA-xb-m6s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYK-bp-Gsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680.79999999999995" y="-140.77961019490255"/>
+            <point key="canvasLocation" x="904.79999999999995" y="-0.44977511244377816"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qtq-ME-hmq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oHL-Q4-8FA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tLr-Cg-3CW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BEh-LQ-kmJ" kind="relationship" relationship="rootViewController" id="8J5-U1-rY8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxP-tu-OCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828" y="-48"/>
         </scene>
     </scenes>
 </document>

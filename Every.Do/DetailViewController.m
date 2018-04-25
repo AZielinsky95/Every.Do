@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dueDateLabel;
 
 @end
 
@@ -23,8 +24,9 @@
     [super viewDidLoad];
     
     self.titleLabel.text = self.detailedItem.title;
-     self.descriptionLabel.text = self.detailedItem.text;
-     self.priorityLabel.text = [NSString stringWithFormat:@"P: %d",self.detailedItem.priorityNum];
+    self.descriptionLabel.text = self.detailedItem.text;
+    self.priorityLabel.text = [NSString stringWithFormat:@"P: %d",self.detailedItem.priorityNum];
+    self.dueDateLabel.text = [NSDateFormatter localizedStringFromDate:self.detailedItem.dueDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
 }
 
 @end

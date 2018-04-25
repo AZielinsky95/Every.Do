@@ -33,14 +33,8 @@
         [attributeString addAttribute:NSStrikethroughStyleAttributeName
                                 value:@2
                                 range:NSMakeRange(0, [attributeString length])];
-        
-        
     }
-//    else
-//    {
-//
-//        self.titleLabel.text = todoItem.title;
-//    }
+
     self.titleLabel.attributedText = attributeString;
 }
 

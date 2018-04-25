@@ -13,7 +13,8 @@
 @property (nonatomic) NSString* title;
 @property (nonatomic) NSString* text;
 @property (nonatomic) int priorityNum;
+@property (nonatomic) NSDate *dueDate;
 @property BOOL isComplete;
--(instancetype)initWithTitle:(NSString*)title description:(NSString*)text priority:(int)num;
+-(instancetype)initWithTitle:(NSString*)title description:(NSString*)text priority:(int)num dueDate:(NSDate*)date;
 
 @end

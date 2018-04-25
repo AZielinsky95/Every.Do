@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UITextField *priorityLabel;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [_datePicker setMinimumDate:[NSDate date]];
 }
 
 - (IBAction)done:(UIBarButtonItem *)sender
@@ -27,6 +29,7 @@
     newItem.title = self.titleLabel.text;
     newItem.priorityNum = [self.priorityLabel.text intValue];
     newItem.text = self.descriptionLabel.text;
+    newItem.dueDate = self.datePicker.date;
     [self.delegate addItemViewController:self didAddItem:newItem];
 }
 
