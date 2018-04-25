@@ -177,12 +177,20 @@
     return YES;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if(section==0)
     return 45;
     else
-    return 0;
+    return 45;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if(section==0)
+        return @"To Do!";
+    else
+        return @"Completed!";
 }
 
 -(void)itemComplete:(UISwipeGestureRecognizer*)sender
